@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Stache Documentation</title>
+    <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css" integrity="sha384-OaUwkBCJ3XlhKfeSv/egU+/KMbsamyYQd8ubzUZvbchxSeicvh39YZsSJ9FpbXYv" crossorigin="anonymous">
+  </head>
+  <body>
+    <header id="stache-header">
+      <bb-navbar class="bb-navbar-showmobile">
+        <nav class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </bb-navbar>
+    </header>
+    <div class="container">
+      <pre>{
+ "partials": {
+  "footer": "<footer id=\"stache-footer\">\n  Footer\n</footer>\n<script src=\"https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js\" integrity=\"sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk\" crossorigin=\"anonymous\"></script>\n<script>\n(function (angular) {\n  'use strict';\n  angular.element(document).ready(function () {\n      angular.bootstrap(document, []);\n  });\n}(window.angular));\n</script>\n",
+  "head": "<head>\n  <meta charset=\"utf-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>{{title}} - {{config.stache.site.title}}</title>\n  <link rel=\"stylesheet\" href=\"https://sky.blackbaudcdn.net/skyux/{{config.stache.skyux.version}}/css/sky-bundle.css\" integrity=\"sha384-OaUwkBCJ3XlhKfeSv/egU+/KMbsamyYQd8ubzUZvbchxSeicvh39YZsSJ9FpbXYv\" crossorigin=\"anonymous\">\n</head>\n",
+  "header": "<header id=\"stache-header\">\n  <bb-navbar class=\"bb-navbar-showmobile\">\n    <nav class=\"container-fluid\">\n      <ul class=\"nav navbar-nav\">\n        <li>\n          <a href=\"/\">Home</a>\n        </li>\n      </ul>\n    </nav>\n  </bb-navbar>\n</header>\n"
+ },
+ "config": {
+  "stache": {
+   "site": {
+    "title": "Stache Documentation"
+   },
+   "skyux": {
+    "version": "1.6.2"
+   }
+  }
+ },
+ "navigation": {
+  "tree": [
+   {
+    "href": "/",
+    "title": "Home",
+    "children": [
+     {
+      "title": "Getting Started",
+      "children": [],
+      "href": "/getting-started/"
+     },
+     {
+      "title": "Components",
+      "children": [
+       {
+        "title": "Directives",
+        "children": [
+         {
+          "title": "Quick Tips",
+          "children": [],
+          "href": "/components/directives/quick-tips/"
+         }
+        ],
+        "href": "/components/directives/"
+       }
+      ],
+      "href": "/components/"
+     }
+    ]
+   }
+  ]
+ },
+ "title": "Home",
+ "layout": "home.html",
+ "contents": "<h1 id=\"-title-\">Home</h1>\n<h2 id=\"subsection-1\">Subsection 1</h2>\n<h2 id=\"subsection-2\">Subsection 2</h2>\n",
+ "mode": "0644",
+ "stats": {
+  "dev": 16777220,
+  "mode": 33188,
+  "nlink": 1,
+  "uid": 12589947,
+  "gid": 80,
+  "rdev": 0,
+  "blksize": 4096,
+  "ino": 96253609,
+  "size": 85,
+  "blocks": 8,
+  "atime": "2016-06-22T18:13:05.000Z",
+  "mtime": "2016-06-21T21:25:18.000Z",
+  "ctime": "2016-06-21T21:25:18.000Z",
+  "birthtime": "2016-06-21T16:38:24.000Z"
+ },
+ "headings": [
+  {
+   "id": "subsection-1",
+   "tag": "h2",
+   "text": "Subsection 1"
+  },
+  {
+   "id": "subsection-2",
+   "tag": "h2",
+   "text": "Subsection 2"
+  }
+ ],
+ "path": {
+  "root": "",
+  "dir": "",
+  "base": "index.html",
+  "ext": ".html",
+  "name": "index",
+  "href": "/"
+ },
+ "filename": "/Users/stevebr/Projects/github/blackbaud/metalsmith-test/src/templates/home.html",
+ "data": true,
+ "blockParams": [],
+ "knownHelpers": {
+  "helperMissing": true,
+  "blockHelperMissing": true,
+  "each": true,
+  "if": true,
+  "unless": true,
+  "with": true,
+  "log": true,
+  "lookup": true
+ }
+}</pre>
+      <h1 id="-title-">Home</h1>
+<h2 id="subsection-1">Subsection 1</h2>
+<h2 id="subsection-2">Subsection 2</h2>
+
+    </div>
+    <footer id="stache-footer">
+      Footer
+    </footer>
+    <script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js" integrity="sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk" crossorigin="anonymous"></script>
+    <script>
+    (function (angular) {
+      'use strict';
+      angular.element(document).ready(function () {
+          angular.bootstrap(document, []);
+      });
+    }(window.angular));
+    </script>
+  </body>
+</html>
