@@ -1,4 +1,10 @@
+path:
+    base: /
+    js: <%= path.base %>js/
+    css: <%= path.base %>css/
 site:
     title: Stache Documentation
 skyux:
     version: 1.6.2
+modules:
+    - stache

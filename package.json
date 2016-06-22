@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "fs-extra": "^0.30.0",
     "handlebars": "^4.0.5",
     "js-yaml": "^3.6.1",
+    "lodash": "^4.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-headings": "^0.1.0",

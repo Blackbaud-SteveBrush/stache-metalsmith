@@ -1,12 +1,15 @@
 <footer id="stache-footer">
   Footer
 </footer>
-<script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js" integrity="sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk" crossorigin="anonymous"></script>
+<script src="https://sky.blackbaudcdn.net/skyux/{{ config.stache.skyux.version }}/js/sky-bundle.min.js" integrity="sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk" crossorigin="anonymous"></script>
+{{#each assets.js }}
+<script src="{{url}}"></script>
+{{/each}}
 <script>
-(function (angular) {
+(function (angular, document) {
   'use strict';
   angular.element(document).ready(function () {
-      angular.bootstrap(document, []);
+      angular.bootstrap(document, [{{{ join config.stache.modules ',' }}}]);
   });
-}(window.angular));
+}(window.angular, document));
 </script>

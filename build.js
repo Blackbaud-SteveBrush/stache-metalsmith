@@ -1,7 +1,8 @@
 (function () {
     'use strict';
 
-    var browserSync,
+    var assets,
+        browserSync,
         config,
         dir,
         headings,
@@ -34,6 +35,7 @@
     markdown = require('metalsmith-markdown');
     templates = require('metalsmith-layouts');
     helpers = require(dir.lib + 'metalsmith-register-helpers');
+    assets = require(dir.lib + 'metalsmith-assets');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
     inPlaceTemplating = require('metalsmith-in-place');
@@ -47,6 +49,10 @@
             files: {
                 stache: 'stache.yml'
             }
+        }))
+        .use(assets({
+            src: ['./src/assets/js/'],
+            dest: dir.dest + 'js/'
         }))
         .use(helpers({
             directory: 'src/helpers'
