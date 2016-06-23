@@ -39,7 +39,7 @@
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
     inPlaceTemplating = require('metalsmith-in-place');
-    navigation = require(dir.lib + 'metalsmith-navigation');
+    navigation = require(dir.lib + 'metalsmith-nav-tree');
 
     metalsmith(dir.base)
         .clean(true)
