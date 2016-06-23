@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Getting Started - Stache Documentation</title>
-    <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css" integrity="sha384-OaUwkBCJ3XlhKfeSv/egU+/KMbsamyYQd8ubzUZvbchxSeicvh39YZsSJ9FpbXYv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css">
   </head>
   <body>
     <header id="stache-header">
@@ -27,6 +27,8 @@
     </header>
     <div class="container">
       <main class="col-sm-9 col-sm-push-3" id="stache-primary-content">
+        <h1 id="-title-">Getting Started</h1>
+
         <pre>{
  "tree": [
   {
@@ -37,6 +39,8 @@
   {
    "title": "Getting Started",
    "children": [],
+   "current": true,
+   "active": true,
    "href": "/getting-started/"
   },
   {
@@ -51,9 +55,11 @@
        "href": "/components/directives/quick-tips/"
       }
      ],
+     "active": true,
      "href": "/components/directives/"
     }
    ],
+   "active": true,
    "href": "/components/"
   }
  ],
@@ -67,6 +73,8 @@
    {
     "title": "Getting Started",
     "children": [],
+    "current": true,
+    "active": true,
     "href": "/getting-started/"
    },
    {
@@ -81,25 +89,26 @@
         "href": "/components/directives/quick-tips/"
        }
       ],
+      "active": true,
       "href": "/components/directives/"
      }
     ],
+    "active": true,
     "href": "/components/"
    }
   ]
  }
 }</pre>
-        <h1 id="-title-">Getting Started</h1>
-
       </main>
       <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
-        (sidebar)
+        <ul class="nav">
+        </ul>
       </aside>
     </div>
     <footer id="stache-footer">
       Footer
     </footer>
-    <script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js" integrity="sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk" crossorigin="anonymous"></script>
+    <script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js"></script>
     <script src="/js/stache-app.js"></script>
     <script>
     (function (angular, document) {

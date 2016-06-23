@@ -1,7 +1,7 @@
 <footer id="stache-footer">
   Footer
 </footer>
-<script src="https://sky.blackbaudcdn.net/skyux/{{ config.stache.skyux.version }}/js/sky-bundle.min.js" integrity="sha384-zzLoEIWqt/1AATUHBzH9CzMG4v5ALwjhPyGvIX9vNmkzQX/QIlUtMmnTKh7q5fxk" crossorigin="anonymous"></script>
+<script src="https://sky.blackbaudcdn.net/skyux/{{{ config.stache.skyux.version }}}/js/sky-bundle.min.js"></script>
 {{#each assets.js }}
 <script src="{{url}}"></script>
 {{/each}}
