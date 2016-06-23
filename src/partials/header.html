@@ -1,13 +1,7 @@
 <header id="stache-header">
   <bb-navbar class="bb-navbar-showmobile">
     <nav class="container-fluid">
-      <ul class="nav navbar-nav">
-        {{#each navigation.patterns.header }}
-        <li>
-          <a href="{{href}}">{{title}}</a>
-        </li>
-        {{/each}}
-      </ul>
+      {{> menu navigation.patterns.header }}
     </nav>
   </bb-navbar>
 </header>

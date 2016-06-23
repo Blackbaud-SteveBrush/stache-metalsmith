@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Components - Stache Documentation</title>
+    <title>Resources - Stache Documentation</title>
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css">
     <style>.active > a,.current > a {color:red!important;}</style>
   </head>
@@ -56,8 +56,23 @@
             <li>
               <a href="/">Home</a>
             </li>
-            <li class="active">
+            <li>
               <a href="/components/">Components</a>
+              <ul>
+              </ul>
+            </li>
+            <li>
+              <a href="/components/directives/">Directives</a>
+              <ul>
+              </ul>
+            </li>
+            <li>
+              <a href="/components/directives/quick-tips/">Quick Tips</a>
+              <ul>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="/components/directives/quick-tips/resources/">Resources</a>
               <ul>
               </ul>
             </li>
@@ -106,19 +121,22 @@
                                         }
                                     ],
                                     "level": 4,
+                                    "isCurrent": true,
+                                    "isActive": true,
                                     "href": "/components/directives/quick-tips/resources/"
                                 }
                             ],
                             "level": 3,
+                            "isActive": true,
                             "href": "/components/directives/quick-tips/"
                         }
                     ],
                     "level": 2,
+                    "isActive": true,
                     "href": "/components/directives/"
                 }
             ],
             "level": 1,
-            "isCurrent": true,
             "isActive": true,
             "href": "/components/"
         }
@@ -159,21 +177,96 @@
                                                 }
                                             ],
                                             "level": 4,
-                                            "href": "/components/directives/quick-tips/resources/"
+                                            "isCurrent": true,
+                                            "isActive": true,
+                                            "href": "/components/directives/quick-tips/resources/",
+                                            "classname": "active"
                                         }
                                     ],
                                     "level": 3,
+                                    "isActive": true,
                                     "href": "/components/directives/quick-tips/"
                                 }
                             ],
                             "level": 2,
+                            "isActive": true,
                             "href": "/components/directives/"
                         }
                     ],
                     "level": 1,
+                    "isActive": true,
+                    "href": "/components/"
+                },
+                {
+                    "title": "Directives",
+                    "children": [
+                        {
+                            "title": "Quick Tips",
+                            "children": [
+                                {
+                                    "title": "Resources",
+                                    "children": [
+                                        {
+                                            "title": "Contact",
+                                            "children": [],
+                                            "level": 5,
+                                            "href": "/components/directives/quick-tips/resources/contact/"
+                                        }
+                                    ],
+                                    "level": 4,
+                                    "isCurrent": true,
+                                    "isActive": true,
+                                    "href": "/components/directives/quick-tips/resources/",
+                                    "classname": "active"
+                                }
+                            ],
+                            "level": 3,
+                            "isActive": true,
+                            "href": "/components/directives/quick-tips/"
+                        }
+                    ],
+                    "level": 2,
+                    "isActive": true,
+                    "href": "/components/directives/"
+                },
+                {
+                    "title": "Quick Tips",
+                    "children": [
+                        {
+                            "title": "Resources",
+                            "children": [
+                                {
+                                    "title": "Contact",
+                                    "children": [],
+                                    "level": 5,
+                                    "href": "/components/directives/quick-tips/resources/contact/"
+                                }
+                            ],
+                            "level": 4,
+                            "isCurrent": true,
+                            "isActive": true,
+                            "href": "/components/directives/quick-tips/resources/",
+                            "classname": "active"
+                        }
+                    ],
+                    "level": 3,
+                    "isActive": true,
+                    "href": "/components/directives/quick-tips/"
+                },
+                {
+                    "title": "Resources",
+                    "children": [
+                        {
+                            "title": "Contact",
+                            "children": [],
+                            "level": 5,
+                            "href": "/components/directives/quick-tips/resources/contact/"
+                        }
+                    ],
+                    "level": 4,
                     "isCurrent": true,
                     "isActive": true,
-                    "href": "/components/",
+                    "href": "/components/directives/quick-tips/resources/",
                     "classname": "active"
                 }
             ]
@@ -196,7 +289,6 @@
                 {
                     "title": "Components",
                     "level": 1,
-                    "isCurrent": true,
                     "isActive": true,
                     "href": "/components/",
                     "classname": "active"
@@ -255,22 +347,25 @@
                                                             ]
                                                         },
                                                         "level": 4,
+                                                        "isCurrent": true,
+                                                        "isActive": true,
                                                         "href": "/components/directives/quick-tips/resources/"
                                                     }
                                                 ]
                                             },
                                             "level": 3,
+                                            "isActive": true,
                                             "href": "/components/directives/quick-tips/"
                                         }
                                     ]
                                 },
                                 "level": 2,
+                                "isActive": true,
                                 "href": "/components/directives/"
                             }
                         ]
                     },
                     "level": 1,
-                    "isCurrent": true,
                     "isActive": true,
                     "href": "/components/",
                     "classname": "bb-navbar-active dropdown"
@@ -282,13 +377,48 @@
             "items": [
                 {
                     "title": "Patterns",
-                    "children": [],
                     "level": 2,
                     "href": "/components/patterns/"
                 },
                 {
                     "title": "Directives",
+                    "children": {
+                        "classname": "nav",
+                        "items": [
+                            {
+                                "title": "Quick Tips",
+                                "children": {
+                                    "classname": "nav",
+                                    "items": [
+                                        {
+                                            "title": "Resources",
+                                            "children": {
+                                                "classname": "nav",
+                                                "items": [
+                                                    {
+                                                        "title": "Contact",
+                                                        "children": [],
+                                                        "level": 5,
+                                                        "href": "/components/directives/quick-tips/resources/contact/"
+                                                    }
+                                                ]
+                                            },
+                                            "level": 4,
+                                            "isCurrent": true,
+                                            "isActive": true,
+                                            "href": "/components/directives/quick-tips/resources/",
+                                            "classname": "current"
+                                        }
+                                    ]
+                                },
+                                "level": 3,
+                                "isActive": true,
+                                "href": "/components/directives/quick-tips/"
+                            }
+                        ]
+                    },
                     "level": 2,
+                    "isActive": true,
                     "href": "/components/directives/"
                 }
             ]
@@ -304,6 +434,21 @@
             </li>
             <li>
               <a href="/components/directives/">Directives</a>
+              <ul class="nav">
+                <li>
+                  <a href="/components/directives/quick-tips/">Quick Tips</a>
+                  <ul class="nav">
+                    <li class="current">
+                      <a href="/components/directives/quick-tips/resources/">Resources</a>
+                      <ul class="nav">
+                        <li>
+                          <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

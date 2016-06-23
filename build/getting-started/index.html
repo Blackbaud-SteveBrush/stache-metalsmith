@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Getting Started - Stache Documentation</title>
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css">
+    <style>.active > a,.current > a {color:red!important;}</style>
   </head>
   <body>
     <header id="stache-header">
@@ -15,98 +16,262 @@
             <li>
               <a href="/">Home</a>
             </li>
-            <li>
+            <li class="bb-navbar-active">
               <a href="/getting-started/">Getting Started</a>
             </li>
-            <li>
+            <li class="dropdown">
               <a href="/components/">Components</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/components/patterns/">Patterns</a>
+                </li>
+                <li>
+                  <a href="/components/directives/">Directives</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/components/directives/quick-tips/">Quick Tips</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="/components/directives/quick-tips/resources/">Resources</a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
       </bb-navbar>
     </header>
     <div class="container">
+      <nav id="stache-breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li class="active">
+              <a href="/getting-started/">Getting Started</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <main class="col-sm-9 col-sm-push-3" id="stache-primary-content">
         <h1 id="-title-">Getting Started</h1>
 
         <pre>{
- "tree": [
-  {
-   "title": "Home",
-   "children": [],
-   "href": "/"
-  },
-  {
-   "title": "Getting Started",
-   "children": [],
-   "current": true,
-   "active": true,
-   "href": "/getting-started/"
-  },
-  {
-   "title": "Components",
-   "children": [
-    {
-     "title": "Directives",
-     "children": [
-      {
-       "title": "Quick Tips",
-       "children": [],
-       "href": "/components/directives/quick-tips/"
-      }
-     ],
-     "active": true,
-     "href": "/components/directives/"
-    }
-   ],
-   "active": true,
-   "href": "/components/"
-  }
- ],
- "patterns": {
-  "header": [
-   {
-    "title": "Home",
-    "children": [],
-    "href": "/"
-   },
-   {
-    "title": "Getting Started",
-    "children": [],
-    "current": true,
-    "active": true,
-    "href": "/getting-started/"
-   },
-   {
-    "title": "Components",
-    "children": [
-     {
-      "title": "Directives",
-      "children": [
-       {
-        "title": "Quick Tips",
-        "children": [],
-        "href": "/components/directives/quick-tips/"
-       }
-      ],
-      "active": true,
-      "href": "/components/directives/"
-     }
+    "tree": [
+        {
+            "title": "Home",
+            "children": [],
+            "level": 1,
+            "href": "/"
+        },
+        {
+            "title": "Getting Started",
+            "children": [],
+            "level": 1,
+            "isCurrent": true,
+            "isActive": true,
+            "href": "/getting-started/"
+        },
+        {
+            "title": "Components",
+            "children": [
+                {
+                    "title": "Patterns",
+                    "children": [],
+                    "level": 2,
+                    "href": "/components/patterns/"
+                },
+                {
+                    "title": "Directives",
+                    "children": [
+                        {
+                            "title": "Quick Tips",
+                            "children": [
+                                {
+                                    "title": "Resources",
+                                    "children": [
+                                        {
+                                            "title": "Contact",
+                                            "children": [],
+                                            "level": 5,
+                                            "href": "/components/directives/quick-tips/resources/contact/"
+                                        }
+                                    ],
+                                    "level": 4,
+                                    "href": "/components/directives/quick-tips/resources/"
+                                }
+                            ],
+                            "level": 3,
+                            "href": "/components/directives/quick-tips/"
+                        }
+                    ],
+                    "level": 2,
+                    "href": "/components/directives/"
+                }
+            ],
+            "level": 1,
+            "href": "/components/"
+        }
     ],
-    "active": true,
-    "href": "/components/"
-   }
-  ]
- }
+    "patterns": {
+        "breadcrumbs": {
+            "classname": "breadcrumb",
+            "items": [
+                {
+                    "title": "Home",
+                    "children": [],
+                    "level": 1,
+                    "href": "/"
+                },
+                {
+                    "title": "Getting Started",
+                    "children": [],
+                    "level": 1,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/getting-started/",
+                    "classname": "active"
+                }
+            ]
+        },
+        "footer": {
+            "classname": "nav navbar-nav",
+            "items": [
+                {
+                    "title": "Home",
+                    "level": 1,
+                    "href": "/",
+                    "classname": ""
+                },
+                {
+                    "title": "Getting Started",
+                    "level": 1,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/getting-started/",
+                    "classname": "active"
+                },
+                {
+                    "title": "Components",
+                    "level": 1,
+                    "href": "/components/",
+                    "classname": ""
+                }
+            ]
+        },
+        "header": {
+            "classname": "nav navbar-nav",
+            "items": [
+                {
+                    "title": "Home",
+                    "children": [],
+                    "level": 1,
+                    "href": "/",
+                    "classname": ""
+                },
+                {
+                    "title": "Getting Started",
+                    "children": [],
+                    "level": 1,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/getting-started/",
+                    "classname": "bb-navbar-active"
+                },
+                {
+                    "title": "Components",
+                    "children": {
+                        "classname": "dropdown-menu",
+                        "items": [
+                            {
+                                "title": "Patterns",
+                                "children": [],
+                                "level": 2,
+                                "href": "/components/patterns/"
+                            },
+                            {
+                                "title": "Directives",
+                                "children": {
+                                    "classname": "dropdown-menu",
+                                    "items": [
+                                        {
+                                            "title": "Quick Tips",
+                                            "children": {
+                                                "classname": "dropdown-menu",
+                                                "items": [
+                                                    {
+                                                        "title": "Resources",
+                                                        "children": {
+                                                            "classname": "dropdown-menu",
+                                                            "items": [
+                                                                {
+                                                                    "title": "Contact",
+                                                                    "children": [],
+                                                                    "level": 5,
+                                                                    "href": "/components/directives/quick-tips/resources/contact/"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "level": 4,
+                                                        "href": "/components/directives/quick-tips/resources/"
+                                                    }
+                                                ]
+                                            },
+                                            "level": 3,
+                                            "href": "/components/directives/quick-tips/"
+                                        }
+                                    ]
+                                },
+                                "level": 2,
+                                "href": "/components/directives/"
+                            }
+                        ]
+                    },
+                    "level": 1,
+                    "href": "/components/",
+                    "classname": "dropdown"
+                }
+            ]
+        },
+        "sidebar": {
+            "classname": "nav nav-stacked"
+        }
+    }
 }</pre>
       </main>
       <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
-        <ul class="nav">
-        </ul>
+        <nav class="sidebar">
+          <ul class="nav nav-stacked">
+          </ul>
+        </nav>
       </aside>
     </div>
     <footer id="stache-footer">
-      Footer
+      <nav class="container">
+        <h3>
+          <a href="#">Stache Documentation</a>
+        </h3>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li class="active">
+            <a href="/getting-started/">Getting Started</a>
+          </li>
+          <li>
+            <a href="/components/">Components</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
     <script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js"></script>
     <script src="/js/stache-app.js"></script>

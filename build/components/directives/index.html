@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Directives - Stache Documentation</title>
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css">
+    <style>.active > a,.current > a {color:red!important;}</style>
   </head>
   <body>
     <header id="stache-header">
@@ -18,92 +19,367 @@
             <li>
               <a href="/getting-started/">Getting Started</a>
             </li>
-            <li>
+            <li class="bb-navbar-active dropdown">
               <a href="/components/">Components</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/components/patterns/">Patterns</a>
+                </li>
+                <li>
+                  <a href="/components/directives/">Directives</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/components/directives/quick-tips/">Quick Tips</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="/components/directives/quick-tips/resources/">Resources</a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
       </bb-navbar>
     </header>
     <div class="container">
+      <nav id="stache-breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/components/">Components</a>
+              <ul>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="/components/directives/">Directives</a>
+              <ul>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <main class="col-sm-9 col-sm-push-3" id="stache-primary-content">
         
         <pre>{
- "tree": [
-  {
-   "title": "Home",
-   "children": [],
-   "href": "/"
-  },
-  {
-   "title": "Getting Started",
-   "children": [],
-   "href": "/getting-started/"
-  },
-  {
-   "title": "Components",
-   "children": [
-    {
-     "title": "Directives",
-     "children": [
-      {
-       "title": "Quick Tips",
-       "children": [],
-       "href": "/components/directives/quick-tips/"
-      }
-     ],
-     "current": true,
-     "active": true,
-     "href": "/components/directives/"
-    }
-   ],
-   "active": true,
-   "href": "/components/"
-  }
- ],
- "patterns": {
-  "header": [
-   {
-    "title": "Home",
-    "children": [],
-    "href": "/"
-   },
-   {
-    "title": "Getting Started",
-    "children": [],
-    "href": "/getting-started/"
-   },
-   {
-    "title": "Components",
-    "children": [
-     {
-      "title": "Directives",
-      "children": [
-       {
-        "title": "Quick Tips",
-        "children": [],
-        "href": "/components/directives/quick-tips/"
-       }
-      ],
-      "current": true,
-      "active": true,
-      "href": "/components/directives/"
-     }
+    "tree": [
+        {
+            "title": "Home",
+            "children": [],
+            "level": 1,
+            "href": "/"
+        },
+        {
+            "title": "Getting Started",
+            "children": [],
+            "level": 1,
+            "href": "/getting-started/"
+        },
+        {
+            "title": "Components",
+            "children": [
+                {
+                    "title": "Patterns",
+                    "children": [],
+                    "level": 2,
+                    "href": "/components/patterns/"
+                },
+                {
+                    "title": "Directives",
+                    "children": [
+                        {
+                            "title": "Quick Tips",
+                            "children": [
+                                {
+                                    "title": "Resources",
+                                    "children": [
+                                        {
+                                            "title": "Contact",
+                                            "children": [],
+                                            "level": 5,
+                                            "href": "/components/directives/quick-tips/resources/contact/"
+                                        }
+                                    ],
+                                    "level": 4,
+                                    "href": "/components/directives/quick-tips/resources/"
+                                }
+                            ],
+                            "level": 3,
+                            "href": "/components/directives/quick-tips/"
+                        }
+                    ],
+                    "level": 2,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/components/directives/"
+                }
+            ],
+            "level": 1,
+            "isActive": true,
+            "href": "/components/"
+        }
     ],
-    "active": true,
-    "href": "/components/"
-   }
-  ]
- }
+    "patterns": {
+        "breadcrumbs": {
+            "classname": "breadcrumb",
+            "items": [
+                {
+                    "title": "Home",
+                    "children": [],
+                    "level": 1,
+                    "href": "/"
+                },
+                {
+                    "title": "Components",
+                    "children": [
+                        {
+                            "title": "Patterns",
+                            "children": [],
+                            "level": 2,
+                            "href": "/components/patterns/"
+                        },
+                        {
+                            "title": "Directives",
+                            "children": [
+                                {
+                                    "title": "Quick Tips",
+                                    "children": [
+                                        {
+                                            "title": "Resources",
+                                            "children": [
+                                                {
+                                                    "title": "Contact",
+                                                    "children": [],
+                                                    "level": 5,
+                                                    "href": "/components/directives/quick-tips/resources/contact/"
+                                                }
+                                            ],
+                                            "level": 4,
+                                            "href": "/components/directives/quick-tips/resources/"
+                                        }
+                                    ],
+                                    "level": 3,
+                                    "href": "/components/directives/quick-tips/"
+                                }
+                            ],
+                            "level": 2,
+                            "isCurrent": true,
+                            "isActive": true,
+                            "href": "/components/directives/",
+                            "classname": "active"
+                        }
+                    ],
+                    "level": 1,
+                    "isActive": true,
+                    "href": "/components/"
+                },
+                {
+                    "title": "Directives",
+                    "children": [
+                        {
+                            "title": "Quick Tips",
+                            "children": [
+                                {
+                                    "title": "Resources",
+                                    "children": [
+                                        {
+                                            "title": "Contact",
+                                            "children": [],
+                                            "level": 5,
+                                            "href": "/components/directives/quick-tips/resources/contact/"
+                                        }
+                                    ],
+                                    "level": 4,
+                                    "href": "/components/directives/quick-tips/resources/"
+                                }
+                            ],
+                            "level": 3,
+                            "href": "/components/directives/quick-tips/"
+                        }
+                    ],
+                    "level": 2,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/components/directives/",
+                    "classname": "active"
+                }
+            ]
+        },
+        "footer": {
+            "classname": "nav navbar-nav",
+            "items": [
+                {
+                    "title": "Home",
+                    "level": 1,
+                    "href": "/",
+                    "classname": ""
+                },
+                {
+                    "title": "Getting Started",
+                    "level": 1,
+                    "href": "/getting-started/",
+                    "classname": ""
+                },
+                {
+                    "title": "Components",
+                    "level": 1,
+                    "isActive": true,
+                    "href": "/components/",
+                    "classname": "active"
+                }
+            ]
+        },
+        "header": {
+            "classname": "nav navbar-nav",
+            "items": [
+                {
+                    "title": "Home",
+                    "children": [],
+                    "level": 1,
+                    "href": "/",
+                    "classname": ""
+                },
+                {
+                    "title": "Getting Started",
+                    "children": [],
+                    "level": 1,
+                    "href": "/getting-started/",
+                    "classname": ""
+                },
+                {
+                    "title": "Components",
+                    "children": {
+                        "classname": "dropdown-menu",
+                        "items": [
+                            {
+                                "title": "Patterns",
+                                "children": [],
+                                "level": 2,
+                                "href": "/components/patterns/"
+                            },
+                            {
+                                "title": "Directives",
+                                "children": {
+                                    "classname": "dropdown-menu",
+                                    "items": [
+                                        {
+                                            "title": "Quick Tips",
+                                            "children": {
+                                                "classname": "dropdown-menu",
+                                                "items": [
+                                                    {
+                                                        "title": "Resources",
+                                                        "children": {
+                                                            "classname": "dropdown-menu",
+                                                            "items": [
+                                                                {
+                                                                    "title": "Contact",
+                                                                    "children": [],
+                                                                    "level": 5,
+                                                                    "href": "/components/directives/quick-tips/resources/contact/"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "level": 4,
+                                                        "href": "/components/directives/quick-tips/resources/"
+                                                    }
+                                                ]
+                                            },
+                                            "level": 3,
+                                            "href": "/components/directives/quick-tips/"
+                                        }
+                                    ]
+                                },
+                                "level": 2,
+                                "isCurrent": true,
+                                "isActive": true,
+                                "href": "/components/directives/"
+                            }
+                        ]
+                    },
+                    "level": 1,
+                    "isActive": true,
+                    "href": "/components/",
+                    "classname": "bb-navbar-active dropdown"
+                }
+            ]
+        },
+        "sidebar": {
+            "classname": "nav nav-stacked",
+            "items": [
+                {
+                    "title": "Patterns",
+                    "level": 2,
+                    "href": "/components/patterns/"
+                },
+                {
+                    "title": "Directives",
+                    "children": {
+                        "classname": "nav",
+                        "items": [
+                            {
+                                "title": "Quick Tips",
+                                "level": 3,
+                                "href": "/components/directives/quick-tips/"
+                            }
+                        ]
+                    },
+                    "level": 2,
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/components/directives/",
+                    "classname": "current"
+                }
+            ]
+        }
+    }
 }</pre>
       </main>
       <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
-        <ul class="nav">
-        </ul>
+        <nav class="sidebar">
+          <ul class="nav nav-stacked">
+            <li>
+              <a href="/components/patterns/">Patterns</a>
+            </li>
+            <li class="current">
+              <a href="/components/directives/">Directives</a>
+              <ul class="nav">
+                <li>
+                  <a href="/components/directives/quick-tips/">Quick Tips</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </aside>
     </div>
     <footer id="stache-footer">
-      Footer
+      <nav class="container">
+        <h3>
+          <a href="#">Stache Documentation</a>
+        </h3>
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/getting-started/">Getting Started</a>
+          </li>
+          <li class="active">
+            <a href="/components/">Components</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
     <script src="https://sky.blackbaudcdn.net/skyux/1.6.2/js/sky-bundle.min.js"></script>
     <script src="/js/stache-app.js"></script>

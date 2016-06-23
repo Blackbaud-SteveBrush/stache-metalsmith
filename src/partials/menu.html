@@ -1,0 +1,10 @@
+<ul{{#if classname }} class="{{ classname }}"{{/ if }}>
+  {{# each items }}
+  <li{{#if classname }} class="{{ classname }}"{{/ if }}>
+    <a href="{{ href }}">{{ title }}</a>
+    {{# if children }}
+    {{> menu children }}
+    {{/ if }}
+  </li>
+  {{/ each }}
+</ul>

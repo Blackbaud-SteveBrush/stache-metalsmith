@@ -6,7 +6,7 @@
             return '"' + context.join('"' + delimiter + '"') + '"';
         },
         json: function (context) {
-            return '<pre>' + JSON.stringify(context, null, ' ') + '</pre>';
+            return '<pre>' + JSON.stringify(context, null, '    ') + '</pre>';
         }
     };
 }());

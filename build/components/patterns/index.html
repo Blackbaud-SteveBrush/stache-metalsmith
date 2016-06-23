@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Components - Stache Documentation</title>
+    <title>Patterns - Stache Documentation</title>
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.2/css/sky-bundle.css">
     <style>.active > a,.current > a {color:red!important;}</style>
   </head>
@@ -56,10 +56,13 @@
             <li>
               <a href="/">Home</a>
             </li>
-            <li class="active">
+            <li>
               <a href="/components/">Components</a>
               <ul>
               </ul>
+            </li>
+            <li class="active">
+              <a href="/components/patterns/">Patterns</a>
             </li>
           </ul>
         </div>
@@ -87,6 +90,8 @@
                     "title": "Patterns",
                     "children": [],
                     "level": 2,
+                    "isCurrent": true,
+                    "isActive": true,
                     "href": "/components/patterns/"
                 },
                 {
@@ -118,7 +123,6 @@
                 }
             ],
             "level": 1,
-            "isCurrent": true,
             "isActive": true,
             "href": "/components/"
         }
@@ -140,7 +144,10 @@
                             "title": "Patterns",
                             "children": [],
                             "level": 2,
-                            "href": "/components/patterns/"
+                            "isCurrent": true,
+                            "isActive": true,
+                            "href": "/components/patterns/",
+                            "classname": "active"
                         },
                         {
                             "title": "Directives",
@@ -171,9 +178,16 @@
                         }
                     ],
                     "level": 1,
+                    "isActive": true,
+                    "href": "/components/"
+                },
+                {
+                    "title": "Patterns",
+                    "children": [],
+                    "level": 2,
                     "isCurrent": true,
                     "isActive": true,
-                    "href": "/components/",
+                    "href": "/components/patterns/",
                     "classname": "active"
                 }
             ]
@@ -196,7 +210,6 @@
                 {
                     "title": "Components",
                     "level": 1,
-                    "isCurrent": true,
                     "isActive": true,
                     "href": "/components/",
                     "classname": "active"
@@ -229,6 +242,8 @@
                                 "title": "Patterns",
                                 "children": [],
                                 "level": 2,
+                                "isCurrent": true,
+                                "isActive": true,
                                 "href": "/components/patterns/"
                             },
                             {
@@ -270,7 +285,6 @@
                         ]
                     },
                     "level": 1,
-                    "isCurrent": true,
                     "isActive": true,
                     "href": "/components/",
                     "classname": "bb-navbar-active dropdown"
@@ -284,7 +298,10 @@
                     "title": "Patterns",
                     "children": [],
                     "level": 2,
-                    "href": "/components/patterns/"
+                    "isCurrent": true,
+                    "isActive": true,
+                    "href": "/components/patterns/",
+                    "classname": "current"
                 },
                 {
                     "title": "Directives",
@@ -299,7 +316,7 @@
       <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
         <nav class="sidebar">
           <ul class="nav nav-stacked">
-            <li>
+            <li class="current">
               <a href="/components/patterns/">Patterns</a>
             </li>
             <li>

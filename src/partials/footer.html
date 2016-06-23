@@ -1,5 +1,10 @@
 <footer id="stache-footer">
-  Footer
+  <nav class="container">
+    <h3>
+      <a href="#">{{ config.stache.site.title }}</a>
+    </h3>
+    {{> menu navigation.patterns.footer }}
+  </nav>
 </footer>
 <script src="https://sky.blackbaudcdn.net/skyux/{{{ config.stache.skyux.version }}}/js/sky-bundle.min.js"></script>
 {{#each assets.js }}

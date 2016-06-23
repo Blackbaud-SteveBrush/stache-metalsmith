@@ -10,7 +10,8 @@
         inPlaceTemplating,
         markdown,
         metalsmith,
-        navigation,
+        navPatterns,
+        navTree,
         paths,
         templates,
         templatesConfig;
@@ -39,7 +40,8 @@
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
     inPlaceTemplating = require('metalsmith-in-place');
-    navigation = require(dir.lib + 'metalsmith-nav-tree');
+    navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
+    navTree = require(dir.lib + 'metalsmith-nav-tree');
 
     metalsmith(dir.base)
         .clean(true)
@@ -62,7 +64,8 @@
         .use(paths({
             directoryIndex: "index.html"
         }))
-        .use(navigation())
+        .use(navTree())
+        .use(navPatterns())
         .use(inPlaceTemplating(templatesConfig))
         .use(templates(templatesConfig))
         .use(browserSync({
