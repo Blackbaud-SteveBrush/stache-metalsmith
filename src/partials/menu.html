@@ -1,7 +1,7 @@
 <ul{{#if classname }} class="{{ classname }}"{{/ if }}>
   {{# each items }}
   <li{{#if classname }} class="{{ classname }}"{{/ if }}>
-    <a href="{{ href }}">{{ title }}</a>
+    <a href="{{ href }}">{{ title }}{{# if children }}&nbsp;<span class="caret"></span>{{/ if }}</a>
     {{# if children }}
     {{> menu children }}
     {{/ if }}

@@ -9,8 +9,8 @@
     <style>.active > a,.current > a {color:red!important;}</style>
   </head>
   <body>
-    <header id="stache-header">
-      <bb-navbar class="bb-navbar-showmobile">
+    <header id="stache-header" class="bb-navbar">
+      <bb-navbar>
         <nav class="container-fluid">
           <ul class="nav navbar-nav">
             <li>
@@ -20,28 +20,13 @@
               <a href="/getting-started/">Getting Started</a>
             </li>
             <li class="dropdown">
-              <a href="/components/">Components</a>
+              <a href="/components/">Components&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/components/patterns/">Patterns</a>
                 </li>
                 <li>
                   <a href="/components/directives/">Directives</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="/components/directives/quick-tips/">Quick Tips</a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a href="/components/directives/quick-tips/resources/">Resources</a>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </li>
@@ -128,13 +113,11 @@
             "items": [
                 {
                     "title": "Home",
-                    "children": [],
                     "level": 1,
                     "href": "/"
                 },
                 {
                     "title": "Getting Started",
-                    "children": [],
                     "level": 1,
                     "isCurrent": true,
                     "isActive": true,
@@ -200,37 +183,6 @@
                             },
                             {
                                 "title": "Directives",
-                                "children": {
-                                    "classname": "dropdown-menu",
-                                    "items": [
-                                        {
-                                            "title": "Quick Tips",
-                                            "children": {
-                                                "classname": "dropdown-menu",
-                                                "items": [
-                                                    {
-                                                        "title": "Resources",
-                                                        "children": {
-                                                            "classname": "dropdown-menu",
-                                                            "items": [
-                                                                {
-                                                                    "title": "Contact",
-                                                                    "children": [],
-                                                                    "level": 5,
-                                                                    "href": "/components/directives/quick-tips/resources/contact/"
-                                                                }
-                                                            ]
-                                                        },
-                                                        "level": 4,
-                                                        "href": "/components/directives/quick-tips/resources/"
-                                                    }
-                                                ]
-                                            },
-                                            "level": 3,
-                                            "href": "/components/directives/quick-tips/"
-                                        }
-                                    ]
-                                },
                                 "level": 2,
                                 "href": "/components/directives/"
                             }

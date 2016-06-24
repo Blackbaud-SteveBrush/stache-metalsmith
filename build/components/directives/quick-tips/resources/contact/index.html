@@ -9,8 +9,8 @@
     <style>.active > a,.current > a {color:red!important;}</style>
   </head>
   <body>
-    <header id="stache-header">
-      <bb-navbar class="bb-navbar-showmobile">
+    <header id="stache-header" class="bb-navbar">
+      <bb-navbar>
         <nav class="container-fluid">
           <ul class="nav navbar-nav">
             <li>
@@ -20,28 +20,13 @@
               <a href="/getting-started/">Getting Started</a>
             </li>
             <li class="bb-navbar-active dropdown">
-              <a href="/components/">Components</a>
+              <a href="/components/">Components&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/components/patterns/">Patterns</a>
                 </li>
                 <li>
                   <a href="/components/directives/">Directives</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="/components/directives/quick-tips/">Quick Tips</a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a href="/components/directives/quick-tips/resources/">Resources</a>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </li>
@@ -58,23 +43,15 @@
             </li>
             <li>
               <a href="/components/">Components</a>
-              <ul>
-              </ul>
             </li>
             <li>
               <a href="/components/directives/">Directives</a>
-              <ul>
-              </ul>
             </li>
             <li>
               <a href="/components/directives/quick-tips/">Quick Tips</a>
-              <ul>
-              </ul>
             </li>
             <li>
               <a href="/components/directives/quick-tips/resources/">Resources</a>
-              <ul>
-              </ul>
             </li>
             <li class="active">
               <a href="/components/directives/quick-tips/resources/contact/">Contact</a>
@@ -151,135 +128,35 @@
             "items": [
                 {
                     "title": "Home",
-                    "children": [],
                     "level": 1,
                     "href": "/"
                 },
                 {
                     "title": "Components",
-                    "children": [
-                        {
-                            "title": "Patterns",
-                            "children": [],
-                            "level": 2,
-                            "href": "/components/patterns/"
-                        },
-                        {
-                            "title": "Directives",
-                            "children": [
-                                {
-                                    "title": "Quick Tips",
-                                    "children": [
-                                        {
-                                            "title": "Resources",
-                                            "children": [
-                                                {
-                                                    "title": "Contact",
-                                                    "children": [],
-                                                    "level": 5,
-                                                    "isCurrent": true,
-                                                    "isActive": true,
-                                                    "href": "/components/directives/quick-tips/resources/contact/",
-                                                    "classname": "active"
-                                                }
-                                            ],
-                                            "level": 4,
-                                            "isActive": true,
-                                            "href": "/components/directives/quick-tips/resources/"
-                                        }
-                                    ],
-                                    "level": 3,
-                                    "isActive": true,
-                                    "href": "/components/directives/quick-tips/"
-                                }
-                            ],
-                            "level": 2,
-                            "isActive": true,
-                            "href": "/components/directives/"
-                        }
-                    ],
                     "level": 1,
                     "isActive": true,
                     "href": "/components/"
                 },
                 {
                     "title": "Directives",
-                    "children": [
-                        {
-                            "title": "Quick Tips",
-                            "children": [
-                                {
-                                    "title": "Resources",
-                                    "children": [
-                                        {
-                                            "title": "Contact",
-                                            "children": [],
-                                            "level": 5,
-                                            "isCurrent": true,
-                                            "isActive": true,
-                                            "href": "/components/directives/quick-tips/resources/contact/",
-                                            "classname": "active"
-                                        }
-                                    ],
-                                    "level": 4,
-                                    "isActive": true,
-                                    "href": "/components/directives/quick-tips/resources/"
-                                }
-                            ],
-                            "level": 3,
-                            "isActive": true,
-                            "href": "/components/directives/quick-tips/"
-                        }
-                    ],
                     "level": 2,
                     "isActive": true,
                     "href": "/components/directives/"
                 },
                 {
                     "title": "Quick Tips",
-                    "children": [
-                        {
-                            "title": "Resources",
-                            "children": [
-                                {
-                                    "title": "Contact",
-                                    "children": [],
-                                    "level": 5,
-                                    "isCurrent": true,
-                                    "isActive": true,
-                                    "href": "/components/directives/quick-tips/resources/contact/",
-                                    "classname": "active"
-                                }
-                            ],
-                            "level": 4,
-                            "isActive": true,
-                            "href": "/components/directives/quick-tips/resources/"
-                        }
-                    ],
                     "level": 3,
                     "isActive": true,
                     "href": "/components/directives/quick-tips/"
                 },
                 {
                     "title": "Resources",
-                    "children": [
-                        {
-                            "title": "Contact",
-                            "children": [],
-                            "level": 5,
-                            "isCurrent": true,
-                            "isActive": true,
-                            "href": "/components/directives/quick-tips/resources/contact/",
-                            "classname": "active"
-                        }
-                    ],
                     "level": 4,
                     "isActive": true,
                     "href": "/components/directives/quick-tips/resources/"
                 },
                 {
                     "title": "Contact",
-                    "children": [],
                     "level": 5,
                     "isCurrent": true,
                     "isActive": true,
@@ -342,41 +219,6 @@
                             },
                             {
                                 "title": "Directives",
-                                "children": {
-                                    "classname": "dropdown-menu",
-                                    "items": [
-                                        {
-                                            "title": "Quick Tips",
-                                            "children": {
-                                                "classname": "dropdown-menu",
-                                                "items": [
-                                                    {
-                                                        "title": "Resources",
-                                                        "children": {
-                                                            "classname": "dropdown-menu",
-                                                            "items": [
-                                                                {
-                                                                    "title": "Contact",
-                                                                    "children": [],
-                                                                    "level": 5,
-                                                                    "isCurrent": true,
-                                                                    "isActive": true,
-                                                                    "href": "/components/directives/quick-tips/resources/contact/"
-                                                                }
-                                                            ]
-                                                        },
-                                                        "level": 4,
-                                                        "isActive": true,
-                                                        "href": "/components/directives/quick-tips/resources/"
-                                                    }
-                                                ]
-                                            },
-                                            "level": 3,
-                                            "isActive": true,
-                                            "href": "/components/directives/quick-tips/"
-                                        }
-                                    ]
-                                },
                                 "level": 2,
                                 "isActive": true,
                                 "href": "/components/directives/"
@@ -452,13 +294,13 @@
               <a href="/components/patterns/">Patterns</a>
             </li>
             <li>
-              <a href="/components/directives/">Directives</a>
+              <a href="/components/directives/">Directives&nbsp;<span class="caret"></span></a>
               <ul class="nav">
                 <li>
-                  <a href="/components/directives/quick-tips/">Quick Tips</a>
+                  <a href="/components/directives/quick-tips/">Quick Tips&nbsp;<span class="caret"></span></a>
                   <ul class="nav">
                     <li>
-                      <a href="/components/directives/quick-tips/resources/">Resources</a>
+                      <a href="/components/directives/quick-tips/resources/">Resources&nbsp;<span class="caret"></span></a>
                       <ul class="nav">
                         <li class="current">
                           <a href="/components/directives/quick-tips/resources/contact/">Contact</a>

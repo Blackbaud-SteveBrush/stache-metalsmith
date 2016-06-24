@@ -2,7 +2,6 @@
     'use strict';
 
     var assets,
-        browserSync,
         config,
         dir,
         headings,
@@ -10,6 +9,7 @@
         inPlaceTemplating,
         markdown,
         metalsmith,
+        metalsmithExpress,
         navPatterns,
         navTree,
         paths,
@@ -30,9 +30,9 @@
         default: 'page.html'
     };
 
-    browserSync = require('metalsmith-browser-sync');
     config = require(dir.lib + 'metalsmith-config');
     metalsmith = require('metalsmith');
+    metalsmithExpress = require('metalsmith-express');
     markdown = require('metalsmith-markdown');
     templates = require('metalsmith-layouts');
     helpers = require(dir.lib + 'metalsmith-register-helpers');
@@ -68,10 +68,7 @@
         .use(navPatterns())
         .use(inPlaceTemplating(templatesConfig))
         .use(templates(templatesConfig))
-        .use(browserSync({
-            server: dir.dest,
-            files: [dir.source + '**/*']
-        }))
+        .use(metalsmithExpress())
         .build(function(err) {
             if (err) {
                 throw err;
