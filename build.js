@@ -4,6 +4,7 @@
     var assets,
         config,
         dir,
+        friendlyTemplateNames,
         headings,
         helpers,
         inPlaceTemplating,
@@ -27,7 +28,7 @@
         engine: 'handlebars',
         directory: dir.source + 'templates/',
         partials: dir.source + 'partials/',
-        default: 'page.html'
+        default: 'layout-sidebar.html'
     };
 
     config = require(dir.lib + 'metalsmith-config');
@@ -36,6 +37,7 @@
     markdown = require('metalsmith-markdown');
     templates = require('metalsmith-layouts');
     helpers = require(dir.lib + 'metalsmith-register-helpers');
+    friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
     assets = require(dir.lib + 'metalsmith-assets');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
@@ -67,6 +69,7 @@
         .use(navTree())
         .use(navPatterns())
         .use(inPlaceTemplating(templatesConfig))
+        .use(friendlyTemplateNames())
         .use(templates(templatesConfig))
         .use(metalsmithExpress())
         .build(function(err) {
