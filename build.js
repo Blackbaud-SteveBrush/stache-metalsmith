@@ -2,6 +2,7 @@
     'use strict';
 
     var assets,
+        beautify,
         config,
         dir,
         friendlyTemplateNames,
@@ -46,6 +47,7 @@
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
     inPlaceTemplating = require('metalsmith-in-place');
+    beautify = require('metalsmith-beautify');
 
     module.exports = function (callback) {
         var ms;
@@ -93,6 +95,15 @@
         ms.use(inPlaceTemplating(templatesConfig));
         ms.use(friendlyTemplateNames());
         ms.use(templates(templatesConfig));
+        ms.use(beautify({
+            'indent_size': 2,
+            'indent_char': ' ',
+            'preserve_newlines': true,
+            'end_with_newline': true,
+            "jslint_happy": true,
+            'css': false,
+            'js': false
+        }));
 
         // Server
         ms.use(metalsmithExpress({
