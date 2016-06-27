@@ -1,59 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "blackbaud-stache@github:blackbaud-stevebrush/stache-metalsmith",
-        "scope": null,
-        "escapedName": "blackbaud-stache",
-        "name": "blackbaud-stache",
-        "rawSpec": "github:blackbaud-stevebrush/stache-metalsmith",
-        "spec": "github:blackbaud-stevebrush/stache-metalsmith",
-        "type": "hosted",
-        "hosted": {
-          "type": "github",
-          "ssh": "git@github.com:blackbaud-stevebrush/stache-metalsmith.git",
-          "sshUrl": "git+ssh://git@github.com/blackbaud-stevebrush/stache-metalsmith.git",
-          "httpsUrl": "git+https://github.com/blackbaud-stevebrush/stache-metalsmith.git",
-          "gitUrl": "git://github.com/blackbaud-stevebrush/stache-metalsmith.git",
-          "shortcut": "github:blackbaud-stevebrush/stache-metalsmith",
-          "directUrl": "https://raw.githubusercontent.com/blackbaud-stevebrush/stache-metalsmith/master/package.json"
-        }
-      },
-      "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith-client"
-    ]
-  ],
-  "_from": "blackbaud-stevebrush/stache-metalsmith",
-  "_id": "blackbaud-stache@0.0.1",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/blackbaud-stache",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "blackbaud-stache@github:blackbaud-stevebrush/stache-metalsmith",
-    "scope": null,
-    "escapedName": "blackbaud-stache",
-    "name": "blackbaud-stache",
-    "rawSpec": "github:blackbaud-stevebrush/stache-metalsmith",
-    "spec": "github:blackbaud-stevebrush/stache-metalsmith",
-    "type": "hosted",
-    "hosted": {
-      "type": "github",
-      "ssh": "git@github.com:blackbaud-stevebrush/stache-metalsmith.git",
-      "sshUrl": "git+ssh://git@github.com/blackbaud-stevebrush/stache-metalsmith.git",
-      "httpsUrl": "git+https://github.com/blackbaud-stevebrush/stache-metalsmith.git",
-      "gitUrl": "git://github.com/blackbaud-stevebrush/stache-metalsmith.git",
-      "shortcut": "github:blackbaud-stevebrush/stache-metalsmith",
-      "directUrl": "https://raw.githubusercontent.com/blackbaud-stevebrush/stache-metalsmith/master/package.json"
-    }
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "git://github.com/blackbaud-stevebrush/stache-metalsmith.git#d27ccf4fc23a8d5ae828628fd2c852ae4ccfdbf8",
-  "_shasum": "fe47d992c9f8e8c0aedffc1342e22aaf2a020cef",
-  "_shrinkwrap": null,
-  "_spec": "blackbaud-stache@github:blackbaud-stevebrush/stache-metalsmith",
-  "_where": "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith-client",
   "author": "",
   "dependencies": {
       "fs-extra": "^0.30.0",
@@ -69,12 +14,8 @@
       "metalsmith-paths": "^2.1.2"
   },
   "devDependencies": {},
-  "gitHead": "d27ccf4fc23a8d5ae828628fd2c852ae4ccfdbf8",
   "license": "ISC",
-  "main": "index.js",
   "name": "blackbaud-stache",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
