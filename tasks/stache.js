@@ -24,6 +24,9 @@
 
             stacheServe: function (context) {
                 stacheMetalsmith(this.async());
+
+                // Need to make grunt move all files?
+                // ['clean:build', 'copy:build', 'metalsmith']
             }
         };
 

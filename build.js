@@ -57,26 +57,44 @@
 
         ms.use(config({
             files: {
-                stache: 'node_modules/blackbaud-stache/stache.yml'
+                stache: [
+                    'node_modules/blackbaud-stache/stache.yml',
+                    'stache.yml'
+                ]
             }
         }));
+
+        // Asset arrays
         ms.use(assets({
-            src: ['node_modules/blackbaud-stache/src/assets/js/'],
-            dest: 'build/js/'
+            src: [
+                'node_modules/blackbaud-stache/src/assets/dist/js/',
+                'node_modules/blackbaud-stache/src/assets/dist/css/'
+            ],
+            dest: 'build/'
         }));
+
+        // Handlebars
         ms.use(helpers({
             directory: 'src/helpers'
         }));
+
+        // Engine.
         ms.use(markdown());
+
+        // Navigation
         ms.use(headings('h2'));
         ms.use(paths({
             directoryIndex: 'index.html'
         }));
         ms.use(navTree());
         ms.use(navPatterns());
+
+        // Templating
         ms.use(inPlaceTemplating(templatesConfig));
         ms.use(friendlyTemplateNames());
         ms.use(templates(templatesConfig));
+
+        // Server
         ms.use(metalsmithExpress({
             liveReload: false
         }));
