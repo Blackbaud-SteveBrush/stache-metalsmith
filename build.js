@@ -19,9 +19,10 @@
 
     dir = {
         base: __dirname + '/',
-        lib: __dirname + '/lib/',
+        content: '../../content/',
+        lib: './lib/',
         source: './src/',
-        dest: './build/'
+        dest: '../../build/'
     };
 
     templatesConfig = {
@@ -32,49 +33,58 @@
     };
 
     config = require(dir.lib + 'metalsmith-config');
+    helpers = require(dir.lib + 'metalsmith-register-helpers');
+    friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
+    assets = require(dir.lib + 'metalsmith-assets');
+    navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
+    navTree = require(dir.lib + 'metalsmith-nav-tree');
+
     metalsmith = require('metalsmith');
     metalsmithExpress = require('metalsmith-express');
     markdown = require('metalsmith-markdown');
     templates = require('metalsmith-layouts');
-    helpers = require(dir.lib + 'metalsmith-register-helpers');
-    friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
-    assets = require(dir.lib + 'metalsmith-assets');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
     inPlaceTemplating = require('metalsmith-in-place');
-    navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
-    navTree = require(dir.lib + 'metalsmith-nav-tree');
 
-    metalsmith(dir.base)
-        .clean(true)
-        .source(dir.source + 'content/')
-        .destination(dir.dest)
-        .use(config({
+    module.exports = function (callback) {
+        var ms;
+
+        ms = metalsmith(dir.base);
+        ms.clean(true);
+        ms.source(dir.content);
+        ms.destination(dir.dest);
+
+        ms.use(config({
             files: {
-                stache: 'stache.yml'
+                stache: 'node_modules/blackbaud-stache/stache.yml'
             }
-        }))
-        .use(assets({
-            src: ['./src/assets/js/'],
-            dest: dir.dest + 'js/'
-        }))
-        .use(helpers({
+        }));
+        ms.use(assets({
+            src: ['node_modules/blackbaud-stache/src/assets/js/'],
+            dest: 'build/js/'
+        }));
+        ms.use(helpers({
             directory: 'src/helpers'
-        }))
-        .use(markdown())
-        .use(headings('h2'))
-        .use(paths({
-            directoryIndex: "index.html"
-        }))
-        .use(navTree())
-        .use(navPatterns())
-        .use(inPlaceTemplating(templatesConfig))
-        .use(friendlyTemplateNames())
-        .use(templates(templatesConfig))
-        .use(metalsmithExpress())
-        .build(function(err) {
+        }));
+        ms.use(markdown());
+        ms.use(headings('h2'));
+        ms.use(paths({
+            directoryIndex: 'index.html'
+        }));
+        ms.use(navTree());
+        ms.use(navPatterns());
+        ms.use(inPlaceTemplating(templatesConfig));
+        ms.use(friendlyTemplateNames());
+        ms.use(templates(templatesConfig));
+        ms.use(metalsmithExpress({
+            liveReload: false
+        }));
+
+        ms.build(function(err) {
             if (err) {
                 throw err;
             }
         });
+    };
 }());
