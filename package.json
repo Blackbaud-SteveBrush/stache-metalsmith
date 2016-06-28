@@ -1,4 +1,41 @@
 {
+  "_args": [
+    [
+      {
+        "raw": "blackbaud-stache@file:../stache-metalsmith",
+        "scope": null,
+        "escapedName": "blackbaud-stache",
+        "name": "blackbaud-stache",
+        "rawSpec": "file:../stache-metalsmith",
+        "spec": "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith",
+        "type": "directory"
+      },
+      "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith-client"
+    ]
+  ],
+  "_from": "../stache-metalsmith",
+  "_id": "blackbaud-stache@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/blackbaud-stache",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "blackbaud-stache@file:../stache-metalsmith",
+    "scope": null,
+    "escapedName": "blackbaud-stache",
+    "name": "blackbaud-stache",
+    "rawSpec": "file:../stache-metalsmith",
+    "spec": "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "file:../stache-metalsmith",
+  "_shasum": "41df9fa237bb354ce533492dac3e495847a73b14",
+  "_shrinkwrap": null,
+  "_spec": "blackbaud-stache@file:../stache-metalsmith",
+  "_where": "/Users/stevebr/Projects/github/blackbaud/stache-metalsmith-client",
   "author": "",
   "dependencies": {
     "fs-extra": "^0.30.0",
@@ -14,13 +51,18 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-paths": "^2.1.2"
   },
+  "description": "``` git clone https://github.com/Blackbaud-SteveBrush/stache-metalsmith-client.git cd stache-metalsmith-client npm install stache serve ```",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-sass": "^1.2.0"
   },
+  "gitHead": "ca67a1754e0af8802d03b6e546e8dbc890f55f53",
   "license": "ISC",
   "name": "blackbaud-stache",
+  "optionalDependencies": {},
+  "readme": "# stache-metalsmith\n\n```\ngit clone https://github.com/Blackbaud-SteveBrush/stache-metalsmith-client.git\ncd stache-metalsmith-client\nnpm install\nstache serve\n```\n",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -15,8 +15,7 @@
         navPatterns,
         navTree,
         paths,
-        templates,
-        templatesConfig;
+        templates;
 
     dir = {
         base: __dirname + '/',
@@ -26,23 +25,16 @@
         dest: '../../build/'
     };
 
-    templatesConfig = {
-        engine: 'handlebars',
-        directory: dir.source + 'templates/',
-        partials: dir.source + 'partials/',
-        default: 'layout-sidebar.html'
-    };
-
     config = require(dir.lib + 'metalsmith-config');
     helpers = require(dir.lib + 'metalsmith-register-helpers');
     friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
     assets = require(dir.lib + 'metalsmith-assets');
     navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
     navTree = require(dir.lib + 'metalsmith-nav-tree');
+    markdown = require(dir.lib + 'metalsmith-marked');
 
     metalsmith = require('metalsmith');
     metalsmithExpress = require('metalsmith-express');
-    markdown = require('metalsmith-markdown');
     templates = require('metalsmith-layouts');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
@@ -53,10 +45,10 @@
         var ms;
 
         ms = metalsmith(dir.base);
+
         ms.clean(true);
         ms.source(dir.content);
         ms.destination(dir.dest);
-
         ms.use(config({
             files: {
                 stache: [
@@ -75,13 +67,19 @@
             dest: 'build/'
         }));
 
+
         // Handlebars
         ms.use(helpers({
             directory: 'src/helpers'
         }));
 
         // Engine.
-        ms.use(markdown());
+        ms.use(markdown({
+            onAfterEach: function (parsed) {
+                // Fix partials being escaped.
+                return parsed.replace(new RegExp('{{&gt;', 'g'), '{{>');
+            }
+        }));
 
         // Navigation
         ms.use(headings('h2'));
@@ -92,9 +90,17 @@
         ms.use(navPatterns());
 
         // Templating
-        ms.use(inPlaceTemplating(templatesConfig));
+        ms.use(inPlaceTemplating({
+            engine: 'handlebars',
+            partials: dir.source + 'partials/'
+        }));
         ms.use(friendlyTemplateNames());
-        ms.use(templates(templatesConfig));
+        ms.use(templates({
+            engine: 'handlebars',
+            directory: dir.source + 'templates/',
+            partials: dir.source + 'partials/',
+            default: 'layout-sidebar.html'
+        }));
         ms.use(beautify({
             'indent_size': 2,
             'indent_char': ' ',
@@ -107,7 +113,8 @@
 
         // Server
         ms.use(metalsmithExpress({
-            liveReload: false
+            liveReload: false,
+            port: 4000
         }));
 
         ms.build(function(err) {
