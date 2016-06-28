@@ -9,7 +9,7 @@
         headings,
         helpers,
         inPlaceTemplating,
-        markdown,
+        marked,
         metalsmith,
         navPatterns,
         navTree,
@@ -26,15 +26,15 @@
     };
 
     config = require(dir.lib + 'metalsmith-config');
-    helpers = require(dir.lib + 'metalsmith-register-helpers');
     friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
     assets = require(dir.lib + 'metalsmith-assets');
     navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
     navTree = require(dir.lib + 'metalsmith-nav-tree');
-    markdown = require(dir.lib + 'metalsmith-marked');
+    marked = require(dir.lib + 'metalsmith-marked');
 
     metalsmith = require('metalsmith');
     server = require('metalsmith-express');
+    helpers = require('metalsmith-register-helpers');
     templates = require('metalsmith-layouts');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
@@ -72,7 +72,7 @@
         }));
 
         // Engine.
-        ms.use(markdown({
+        ms.use(marked({
             onAfterEach: function (parsed) {
                 // Fix partials being escaped.
                 return parsed.replace(new RegExp('{{&gt;', 'g'), '{{>');
