@@ -11,10 +11,10 @@
         inPlaceTemplating,
         markdown,
         metalsmith,
-        metalsmithExpress,
         navPatterns,
         navTree,
         paths,
+        server,
         templates;
 
     dir = {
@@ -34,7 +34,7 @@
     markdown = require(dir.lib + 'metalsmith-marked');
 
     metalsmith = require('metalsmith');
-    metalsmithExpress = require('metalsmith-express');
+    server = require('metalsmith-express');
     templates = require('metalsmith-layouts');
     headings = require('metalsmith-headings');
     paths = require('metalsmith-paths');
@@ -50,12 +50,10 @@
         ms.source(dir.content);
         ms.destination(dir.dest);
         ms.use(config({
-            files: {
-                stache: [
-                    'node_modules/blackbaud-stache/stache.yml',
-                    'stache.yml'
-                ]
-            }
+            stache: [
+                'node_modules/blackbaud-stache/stache.yml',
+                'stache.yml'
+            ]
         }));
 
         // Asset arrays
@@ -101,6 +99,8 @@
             partials: dir.source + 'partials/',
             default: 'layout-sidebar.html'
         }));
+
+        // Clean up HTML.
         ms.use(beautify({
             'indent_size': 2,
             'indent_char': ' ',
@@ -112,12 +112,12 @@
         }));
 
         // Server
-        ms.use(metalsmithExpress({
+        ms.use(server({
             liveReload: false,
             port: 4000
         }));
 
-        ms.build(function(err) {
+        ms.build(function (err) {
             if (err) {
                 throw err;
             }
