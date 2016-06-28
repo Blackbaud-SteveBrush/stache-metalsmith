@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> header }}
+    <div class="container">
+      {{> breadcrumbs }}
+      <main class="col-sm-9 col-sm-push-3" id="stache-primary-content">
+        {{{ contents }}}
+        {{> panels navigation.patterns.sidebar }}
+      </main>
+      <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
+        {{> sidebar }}
+      </aside>
+    </div>
+    {{> footer }}
+  </body>
+</html>

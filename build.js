@@ -97,19 +97,19 @@
             engine: 'handlebars',
             directory: dir.source + 'templates/',
             partials: dir.source + 'partials/',
-            default: 'layout-sidebar.html'
+            default: 'sidebar.html'
         }));
 
         // Clean up HTML.
-        ms.use(beautify({
-            'indent_size': 2,
-            'indent_char': ' ',
-            'preserve_newlines': true,
-            'end_with_newline': true,
-            "jslint_happy": true,
-            'css': false,
-            'js': false
-        }));
+        // ms.use(beautify({
+        //     'indent_size': 2,
+        //     'indent_char': ' ',
+        //     'preserve_newlines': true,
+        //     'end_with_newline': true,
+        //     "jslint_happy": true,
+        //     'css': false,
+        //     'js': false
+        // }));
 
         // Server
         ms.use(server({

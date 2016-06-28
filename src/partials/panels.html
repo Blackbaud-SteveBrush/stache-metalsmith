@@ -1,8 +1,9 @@
-<div class="panel panel-default">
-  <header class="panel-heading">
-    <h4 class="panel-title">Panel Title</h4>
-  </header>
-  <div class="panel-body">
-    Panel content here.
+<div class="stache-panels">
+  <div class="row">
+    {{# each items }}
+    <div class="col-sm-4">
+      {{> panel }}
+    </div>
+    {{/ each }}
   </div>
 </div>
