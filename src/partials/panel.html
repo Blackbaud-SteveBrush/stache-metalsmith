@@ -1,8 +1,14 @@
-<div class="panel panel-default">
+{{# if uri }}
+  <a href="{{ uri }}">
+{{/ if }}
+<div class="panel panel-default {{ classname }}">
   <header class="panel-heading">
     <h4 class="panel-title">{{ title }}</h4>
   </header>
   <div class="panel-body">
-    {{ description }}
+    {{{ content }}}
   </div>
 </div>
+{{# if uri }}
+  </a>
+{{/ if }}

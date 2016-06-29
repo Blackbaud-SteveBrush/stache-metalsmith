@@ -5,13 +5,11 @@
     {{> header }}
     <div class="container">
       {{> breadcrumbs }}
-      <main class="col-sm-9 col-sm-push-3" id="stache-primary-content">
+      <main id="stache-primary-content">
         {{{ contents }}}
-        {{> panels navigation.patterns.sidebar }}
+        {{{ json navigation.patterns.panels }}}
+        {{> panels navigation.patterns.panels }}
       </main>
-      <aside class="col-sm-3 col-sm-pull-9" id="stache-secondary-content">
-        {{> sidebar }}
-      </aside>
     </div>
     {{> footer }}
   </body>

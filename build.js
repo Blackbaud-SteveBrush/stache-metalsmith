@@ -28,7 +28,7 @@
     config = require(dir.lib + 'metalsmith-config');
     friendlyTemplateNames = require(dir.lib + 'metalsmith-friendly-template-names');
     assets = require(dir.lib + 'metalsmith-assets');
-    navPatterns = require(dir.lib + 'metalsmith-nav-patterns');
+    navPatterns = require(dir.lib + 'metalsmith-nav-patterns.js');
     navTree = require(dir.lib + 'metalsmith-nav-tree');
     marked = require(dir.lib + 'metalsmith-marked');
 
@@ -84,7 +84,9 @@
         ms.use(paths({
             directoryIndex: 'index.html'
         }));
-        ms.use(navTree());
+        ms.use(navTree({
+            includeFileFields: ['title', 'description']
+        }));
         ms.use(navPatterns());
 
         // Templating
